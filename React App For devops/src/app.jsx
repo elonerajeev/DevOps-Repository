@@ -6,6 +6,10 @@ import './app.css'
 export function App() {
   const [count, setCount] = useState(0)
 
+  const resetCount = () => {
+    setCount(0)
+  }
+
   return (
     <>
       <div>
@@ -20,6 +24,9 @@ export function App() {
       <div class="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
+        </button>
+        <button onClick={resetCount}>
+          Reset
         </button>
         <p>
           Edit <code>src/app.jsx</code> and save to test HMR
